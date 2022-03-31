@@ -1,125 +1,256 @@
 {
-	"mouseover": [{
-		"selector": "#live2d",
-		"text": ["快… 快把手拿開~", "鼠… 滑鼠放錯地方了！", "呀！" ,"你要幹嘛呀？", "喵喵喵？", "怕怕(ノ≧∇≦)ノ", "我要生氣了哦", "Hentai！"]
-	}, {
-		"selector": "#waifu-tool .fa-home",
-		"text": ["點擊這里返回首頁！", "要回去首頁嗎？"]
-	}, {
-		"selector": "#waifu-tool .fa-user-circle",
-		"text": ["要見見我的姐姐嘛？", "想要看我妹妹嘛？", "要切換看板娘嗎？"]
-	}, {
-		"selector": "#waifu-tool .fa-street-view",
-		"text": ["這次要扮演什麼呢？", "變裝！", "讓我們看看接下來會發生什麼！"]
-	}, {
-		"selector": "#waifu-tool .fa-info-circle",
-		"text": ["想要知道更多關於我的事嗎？"]
-	}, {
-		"selector": "#waifu-tool .fa-times",
-		"text": ["到了要說再見的時候了嗎？", "嗚嗚 QAQ 後會有期……", "下次再見~ QuQ"]
-	}, {
-		"selector": ".breadcrumb a[href^='/about']",
-		"text": ["你想知道我家主人是誰嗎？", "這裡有一些關於我家主人的秘密哦。"]
-	}, {
-		"selector": ".breadcrumb a[href^='/archives']",
-		"text": ["翻頁比較麻煩嗎，那就來看看文章歸檔吧。", "文章目錄都整理在這裡啦！"]
-	}, {
-		"selector": ".breadcrumb a[href^='/links']",
-		"text": ["這是我的朋友們哦ヾ(◍°∇°◍)ﾉﾞ", "要去大佬們的家看看嗎？", "要去拜訪一下我的朋友們嗎？"]
-	}, {
-		"selector": ".site-author",
-		"text": ["我家主人好看嗎？", "這是我家主人(*´∇｀*)"]
-	}, {
-		"selector": ".feed-link a",
-		"text": ["這裡可以使用 RSS 訂閱呢！", "利用 feed 訂閱器，就能快速知道博客有沒有更新了呢。"]
-	}, {
-		"selector": ".cc-opacity, .post-copyright-author",
-		"text": ["要記得規範轉載哦。", "所有文章均採用 CC BY-NC-SA 4.0 授權合約～", "轉載前要先注意下文章的版權協議呢。"]
-	}, {
-		"selector": ".links-of-author",
-		"text": ["這裡是主人的常駐位址哦。", "這裡有主人的聯繫方式！"]
-	}, {
-		"selector": "[data-fancybox]",
-		"text": ["點擊圖片可以放大呢。"]
-	}, {
-		"selector": ".copy-btn",
-		"text": ["代碼可以直接點擊複製喲。"]
-	}, {
-		"selector": ".highlight .table-container, .gist",
-		"text": ["GitHub！我是新手！", "Java 是最好的語言！"]
-	}, {
-		"selector": ".postname",
-		"text": ["要看看 <span>{text}</span> 這篇文章嗎？"]
-	}, {
-		"selector": ".container a[href^='http'], .nav-link .nav-text",
-		"text": ["要去看看 <span>{text}</span> 嗎？", "去 <span>{text}</span> 逛逛吧。", "到 <span>{text}</span> 看看吧。"]
-	}, {
-		"selector": ".back-to-top-btn",
-		"text": ["點它就可以回到頂部啦！", "回到最初的起點～", "要回到開始的地方嗎？"]
-	}, {
-		"selector": ".reward-container",
-		"text": ["要打賞我嘛？好期待啊～", "主人最近在吃土呢，很辛苦的樣子，給他一些錢錢吧～"]
-	}, {
-		"selector": ".extend.next",
-		"text": ["去下一頁看看吧。", "點它可以前進哦！", "要翻到下一頁嗎？"]
-	}, {
-		"selector": ".extend.prev",
-		"text": ["去上一頁看看吧。", "點它可以後退哦！", "要翻到上一頁嗎？"]
-	}, {
-		"selector": "input.vnick",
-		"text": ["該怎麼稱呼你呢？", "你叫什麼名字呢？"]
-	}, {
-		"selector": ".vmail",
-		"text": ["留下你的郵箱，不然就沒有頭像了喔！", "記得設置好 Gravatar 頭像哦！", "為了方便通知你，一定要留下郵箱！"]
-	}, {
-		"selector": ".vlink",
-		"text": ["告訴我你的家在哪裡吧~"]
-	}, {
-		"selector": ".veditor",
-		"text": ["想要去評論些什麼嗎？", "要說點什麼嗎？"]
-	}, {
-		"selector": ".vicon .markdown",
-		"text": ["使用 Markdown 讓評論更美觀吧～"]
-	}, {
-		"selector": ".vemoji-btn",
-		"text": ["要插入一個可愛的表情嗎？"]
-	}, {
-		"selector": ".vpreview-btn",
-		"text": ["要預覽一下你的發言嗎？", "快看看你的評論有多少負熵！"]
-	}, {
-		"selector": ".vsubmit",
-		"text": ["要對自己的發言負責哦～", "要提交了嗎？"]
-	}, {
-		"selector": ".vcontent",
-		"text": ["哇，快看看這個評論！", "如果有疑問，請儘快留言哦～"]
-	}, {
-		"selector": ".el-switch-style",
-		"text": ["點擊這里可以保護眼睛~", "要變更主題顏色嗎？"]
-	}],
-	"click": [{
-		"selector": "#live2d",
-		"text": ["是… 是不小心碰到了吧…", "蘿莉控是什麼呀？", "你看太多本子了！", "小心我咬你喔！", "請… 小心點。", "喜… 喜歡這樣做，我會很困擾的。", "(咕嚕咕嚕嗚)"]
-	}, {
-		"selector": ".veditor",
-		"text": ["要說些什麼呢？", "一定要認真填寫喵～", "有什麼想說的嗎？"]
-	}],
-	"seasons": [{
-		"date": "01/01",
-		"text": "<span>元旦</span>了呢，新的一年又開始了，今年是 {year} 年～"
-	}, {
-		"date": "02/14",
-		"text": "又是一年<span>情人節</span>，{year} 年找到對象了嘛～"
-	}, {
-		"date": "04/01",
-		"text": "悄悄告訴你一個秘密～<span>今天是愚人節，不要被騙了哦～</span>"
-	}, {
-		"date": "06/01",
-		"text": "<span>兒童節</span>了呢…"
-	}, {
-		"date": "07/09",
-		"text": "今天是主人的生日呢~"
-	}, {
-		"date": "12/20-12/31",
-		"text": "這幾天是<span>耶誕節</span>！"
-	}]
+	"mouseover": [
+		{
+			"selector": "#waifu-tool .fa-home",
+			"text": [
+				"點擊這里返回首頁！",
+				"要回去首頁嗎？"
+			]
+		},
+		{
+			"selector": "#waifu-tool .fa-comment",
+			"text": [
+				"猜猜我要說些什麼？",
+				"我從青蛙王子那里聽到不少人生經驗。"
+			]
+		},
+		{
+			"selector": "#waifu-tool .fa-user-circle",
+			"text": [
+				"要見見我的姐姐嘛？",
+				"想要看我妹妹嘛？",
+				"要切換看板娘嗎？"
+			]
+		},
+		{
+			"selector": "#waifu-tool .fa-street-view",
+			"text": [
+				"這次要扮演什麼呢？",
+				"變裝！",
+				"來看看接下來會發生什麼事情~"
+			]
+		},
+		{
+			"selector": "#waifu-tool .fa-info-circle",
+			"text": [
+				"想要知道更多關於我的事嗎？"
+			]
+		},
+		{
+			"selector": "#waifu-tool .fa-times",
+			"text": [
+				"到了要說再見的時候了嗎？",
+				"嗚嗚 QAQ 後會有期……",
+				"下次再見~ QuQ"
+			]
+		},
+		{
+			"selector": ".breadcrumb a[href^='/about']",
+			"text": [
+				"你想知道我家主人是誰嗎？",
+				"這裡有一些關於我家主人的秘密哦。"
+			]
+		},
+		{
+			"selector": ".breadcrumb a[href^='/archives']",
+			"text": [
+				"翻頁比較麻煩嗎，那就來看看文章歸檔吧。",
+				"文章目錄都整理在這裡啦！"
+			]
+		},
+		{
+			"selector": ".breadcrumb a[href^='/links']",
+			"text": [
+				"這是我的朋友哦ヾ(◍°∇°◍)ﾉﾞ",
+				"要去大佬們的家看看嗎？",
+				"要去拜訪一下我的朋友嗎？"
+			]
+		},
+		{
+			"selector": ".breadcrumb a[href^='https://github.com/INEWSK']",
+			"text": [
+				"GitHub！我是新手！",
+				"Java 是最好的語言！"
+			]
+		},
+		{
+			"selector": ".site-author",
+			"text": [
+				"我家主人好看嗎？",
+				"這是我家主人(*´∇｀*)"
+			]
+		},
+		{
+			"selector": ".feed-link a",
+			"text": [
+				"這裡可以使用 RSS 訂閱呢！",
+				"利用 feed 訂閱器，就能快速知道博客有沒有更新了呢。"
+			]
+		},
+		{
+			"selector": ".links-of-author",
+			"text": [
+				"這裡是主人的常駐位址哦。",
+				"這裡有主人的聯繫方式！"
+			]
+		},
+		{
+			"selector": "[data-fancybox] img",
+			"text": [
+				"點擊圖片可以放大呢。"
+			]
+		},
+		{
+			"selector": ".copy-btn",
+			"text": [
+				"代碼可以直接點擊複製喲。"
+			]
+		},
+		{
+			"selector": ".postname",
+			"text": [
+				"要看看 「<span>{text}</span>」 這篇文章嗎？"
+			]
+		},
+		{
+			"selector": ".posts a[href^='http']",
+			"text": [
+				"要去看看 <span>{text}</span> 嗎？",
+				"去 <span>{text}</span> 逛逛吧。",
+				"到 <span>{text}</span> 看看吧。"
+			]
+		},
+		{
+			"selector": ".back-to-top-btn",
+			"text": [
+				"點它就可以回到頂部啦！",
+				"回到最初的起點～",
+				"要回到開始的地方嗎？"
+			]
+		},
+		{
+			"selector": ".reward-container",
+			"text": [
+				"要打賞我嘛？好期待啊～",
+				"主人最近在吃土呢，很辛苦的樣子，給他一些錢錢吧～"
+			]
+		},
+		{
+			"selector": "input.vnick",
+			"text": [
+				"該怎麼稱呼你呢？",
+				"你叫什麼名字呢？"
+			]
+		},
+		{
+			"selector": ".vmail",
+			"text": [
+				"留下你的郵箱，不然就沒有頭像了喔！",
+				"記得設置好 Gravatar 頭像哦！",
+				"為了方便通知你，一定要留下郵箱！"
+			]
+		},
+		{
+			"selector": ".vlink",
+			"text": [
+				"告訴我你的家在哪裡吧~"
+			]
+		},
+		{
+			"selector": ".veditor",
+			"text": [
+				"想要去評論些什麼嗎？",
+				"要說點什麼嗎？"
+			]
+		},
+		{
+			"selector": ".vicon .markdown",
+			"text": [
+				"使用 Markdown 讓評論更美觀吧～"
+			]
+		},
+		{
+			"selector": ".vemoji-btn",
+			"text": [
+				"要插入一個可愛的表情嗎？"
+			]
+		},
+		{
+			"selector": ".vpreview-btn",
+			"text": [
+				"要預覽一下你的發言嗎？",
+				"快看看你的評論有多少負熵！"
+			]
+		},
+		{
+			"selector": ".vsubmit",
+			"text": [
+				"要對自己的發言負責哦～",
+				"要提交了嗎？"
+			]
+		},
+		{
+			"selector": ".vcontent",
+			"text": [
+				"哇，快看看這個評論！",
+				"如果有疑問，請儘快留言哦～"
+			]
+		},
+		{
+			"selector": ".el-switch-style",
+			"text": [
+				"點擊這里可以保護眼睛~",
+				"要變更主題顏色嗎？"
+			]
+		}
+	],
+	"click": [
+		{
+			"selector": "#live2d",
+			"text": [
+				"是… 是不小心碰到了吧…",
+				"蘿莉控是什麼呀？",
+				"你看太多本子了！",
+				"小心我咬你喔！",
+				"請… 小心點。",
+				"喜… 喜歡這樣做，我會很困擾的。",
+				"(咕嚕咕嚕嗚)",
+				"我要生氣囉！"
+			]
+		},
+		{
+			"selector": ".veditor",
+			"text": [
+				"要說些什麼呢？",
+				"一定要認真填寫喵～",
+				"有什麼想說的嗎？"
+			]
+		}
+	],
+	"seasons": [
+		{
+			"date": "01/01",
+			"text": "<span>元旦</span>了呢，新的一年又開始了，今年是 {year} 年～"
+		},
+		{
+			"date": "02/14",
+			"text": "又是一年<span>情人節</span>，{year} 年找到對象了嘛～"
+		},
+		{
+			"date": "04/01",
+			"text": "悄悄告訴你一個秘密～<span>今天是愚人節，不要被騙了～</span>"
+		},
+		{
+			"date": "06/01",
+			"text": "<span>兒童節</span>了呢…"
+		},
+		{
+			"date": "07/09",
+			"text": "今天是主人的生日呢~"
+		},
+		{
+			"date": "12/20-12/31",
+			"text": "這幾天是<span>耶誕節</span>！"
+		}
+	]
 }

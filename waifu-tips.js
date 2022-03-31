@@ -22,9 +22,10 @@ function loadWidget(config) {
     "beforeend",
     `<div id="waifu">
 			<div id="waifu-tips"></div>
-			<canvas id="live2d" width="800" height="800"></canvas>
+			<canvas id="live2d" width="640" height="640"></canvas>
 			<div id="waifu-tool">
 				<span class="fa fa-lg fa-home"></span>
+        <span class="fa fa-lg fa-comment"></span>
 				<span class="fa fa-lg fa-user-circle"></span>
 				<span class="fa fa-lg fa-street-view"></span>
 				<span class="fa fa-lg fa-info-circle"></span>
@@ -50,6 +51,8 @@ function loadWidget(config) {
       "拿小拳拳錘你胸口！",
       "我只是閉眼睛一下啦。",
       "你還記得自己喝過多少瓶藥水嘛？",
+      "請別太勉強，盡力就好。",
+      "沒問題的。",
     ];
   window.addEventListener("mousemove", () => (userAction = true));
   window.addEventListener("keydown", () => (userAction = true));
@@ -74,6 +77,9 @@ function loadWidget(config) {
         }
       });
     document
+      .querySelector("#waifu-tool .fa-comment")
+      .addEventListener("click", showHitokoto);
+    document
       .querySelector("#waifu-tool .fa-user-circle")
       .addEventListener("click", loadOtherModel);
     document
@@ -88,7 +94,7 @@ function loadWidget(config) {
       .querySelector("#waifu-tool .fa-times")
       .addEventListener("click", () => {
         localStorage.setItem("waifu-display", Date.now());
-        showMessage("QWQ 再見~", 2000, 11);
+        showMessage("嗚 QWQ，再見~", 2500, 11);
         setTimeout(() => {
           document.getElementById("waifu").style.display = "none";
           document
@@ -105,7 +111,8 @@ function loadWidget(config) {
       showMessage("記得標記來源喔~", 6000, 9);
     });
     window.addEventListener("visibilitychange", () => {
-      if (!document.hidden) showMessage("歡迎回來", 6000, 9);
+      messageArray = ["歡迎回來。", "嗨～♪"];
+      if (!document.hidden) showMessage(randomSelection(messageArray), 6000, 9);
     });
   })();
 
@@ -120,12 +127,17 @@ function loadWidget(config) {
       else if (now > 11 && now <= 13) text = "中午了，現在是午餐時間！";
       else if (now > 13 && now <= 17)
         text = "午後很容易犯困呢，今天的運動目標完成了嗎？";
-      else if (now > 17 && now <= 19) text = "傍晚了！窗外夕陽的景色很美麗呢～";
-      else if (now > 19 && now <= 21) text = "晚上好，今天過得怎麼樣？";
+      else if (now > 17 && now <= 19)
+        text = "傍晚了！窗外夕陽的景色很美麗呢~ 有去看看嗎？";
+      else if (now > 19 && now <= 21)
+        text = [
+          "晚上好，今天過得怎麼樣？",
+          "晚上好，今天也辛苦了，以後這樣的生活還會繼續吧？",
+        ];
       else if (now > 21 && now <= 23)
         text = [
           "已經這麼晚了呀，早點休息吧，晚安～",
-          "深夜時記得要愛護眼睛呀！",
+          "夜深了，記得要愛護自己眼睛呀！",
         ];
       else text = "你是夜貓子呀？這麼晚還不睡覺，明天起的來嘛？";
     }
@@ -152,6 +164,17 @@ function loadWidget(config) {
     // }
     showMessage(text, 7000, 8);
   })();
+
+  function showHitokoto() {
+    // 增加 hitokoto.cn 的 API
+    fetch("https://api.moedog.org/hitokoto/?charset=utf-8")
+      .then(async (response) => response.text())
+      .then((result) => {
+        const converter = OpenCC.Converter({ from: "cn", to: "hk" });
+        const text = converter(result);
+        showMessage(text, 6000, 9);
+      });
+  }
 
   function showMessage(text, timeout, priority) {
     if (
@@ -309,7 +332,8 @@ function initWidget(config, apiPath) {
   document.body.insertAdjacentHTML(
     "beforeend",
     `<div id="waifu-toggle">
-			<span>看板娘</span>
+      <i class="fa fa-heart fa-beat" style="color:#d43f57"></i>
+			<span>召喚</span>
 		</div>`
   );
   const toggle = document.getElementById("waifu-toggle");
