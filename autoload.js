@@ -41,3 +41,9 @@ if (screen.width >= 768) {
 // initWidget 第一个参数为 waifu-tips.json 的路径，第二个参数为 API 地址
 // API 后端可自行搭建，参考 https://github.com/fghrsh/live2d_api
 // 初始化看板娘会自动加载指定目录下的 waifu-tips.json
+
+console.log(
+  "%c Live2D Widget %c  https://github.com/stevenjoezhang/live2d-widget ",
+  "margin: 1em 0; padding: 5px 10px; background: #f26763; color: #fff",
+  "margin: 1em 0; padding: 5px 0px; background: #fff;"
+);

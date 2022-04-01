@@ -26,10 +26,10 @@ function loadWidget(config) {
 			<div id="waifu-tool">
 				<span class="fa fa-lg fa-home"></span>
         <span class="fa fa-lg fa-comment"></span>
-				<span class="fa fa-lg fa-user-circle"></span>
-				<span class="fa fa-lg fa-street-view"></span>
-				<span class="fa fa-lg fa-info-circle"></span>
-				<span class="fa fa-lg fa-times"></span>
+				<span class="fa fa-lg fa-user-group"></span>
+				<span class="fa fa-lg fa-shirt"></span>
+        <span class="fa fa-lg fa-moon"></span>
+				<span class="fa fa-lg fa-xmark"></span>
 			</div>
 		</div>`
   );
@@ -80,21 +80,26 @@ function loadWidget(config) {
       .querySelector("#waifu-tool .fa-comment")
       .addEventListener("click", showHitokoto);
     document
-      .querySelector("#waifu-tool .fa-user-circle")
+      .querySelector("#waifu-tool .fa-user-group")
       .addEventListener("click", loadOtherModel);
     document
-      .querySelector("#waifu-tool .fa-street-view")
+      .querySelector("#waifu-tool .fa-shirt")
       .addEventListener("click", loadRandModel);
     document
-      .querySelector("#waifu-tool .fa-info-circle")
-      .addEventListener("click", () => {
-        open("https://github.com/stevenjoezhang/live2d-widget");
-      });
+      .querySelector("#waifu-tool .fa-moon")
+      .addEventListener("click", () =>
+        document.getElementById("update_style").click()
+      );
+    // document
+    //   .querySelector("#waifu-tool .fa-info-circle")
+    //   .addEventListener("click", () => {
+    //     open("https://github.com/stevenjoezhang/live2d-widget");
+    //   });
     document
-      .querySelector("#waifu-tool .fa-times")
+      .querySelector("#waifu-tool .fa-xmark")
       .addEventListener("click", () => {
         localStorage.setItem("waifu-display", Date.now());
-        showMessage("嗚 QWQ，再見~", 2500, 11);
+        showMessage("嗚 QWQ，再見～", 2500, 11);
         setTimeout(() => {
           document.getElementById("waifu").style.display = "none";
           document
@@ -108,7 +113,7 @@ function loadWidget(config) {
       showMessage("想要偷看什麼小祕密嗎？", 6000, 9);
     };
     window.addEventListener("copy", () => {
-      showMessage("記得標記來源喔~", 6000, 9);
+      showMessage("記得標記來源喔～", 6000, 9);
     });
     window.addEventListener("visibilitychange", () => {
       messageArray = ["歡迎回來。", "嗨～♪"];
@@ -128,7 +133,7 @@ function loadWidget(config) {
       else if (now > 13 && now <= 17)
         text = "午後很容易犯困呢，今天的運動目標完成了嗎？";
       else if (now > 17 && now <= 19)
-        text = "傍晚了！窗外夕陽的景色很美麗呢~ 有去看看嗎？";
+        text = "傍晚了！窗外夕陽的景色很美麗呢～ 有去看看嗎？";
       else if (now > 19 && now <= 21)
         text = [
           "晚上好，今天過得怎麼樣？",
@@ -172,7 +177,7 @@ function loadWidget(config) {
       .then((result) => {
         const converter = OpenCC.Converter({ from: "cn", to: "hk" });
         const text = converter(result);
-        showMessage(text, 6000, 9);
+        showMessage(text, 7000, 9);
       });
   }
 
@@ -203,9 +208,9 @@ function loadWidget(config) {
     let modelTextures = localStorage.getItem("live2d-model-textures");
     let modelTexturesId = localStorage.getItem("live2d-model-textures-id");
     if (modelId === null) {
-      // 首次加載
+      // 首次加載時顯示 Pio 指定皮膚
       modelId = 0; // 模型 ID
-      modelTextures = "Pio/animal-costume"; // 模型皮膚名稱
+      modelTextures = "Pio/winter-coat-2017-costume-brown"; // 模型皮膚名稱
       modelTexturesId = 53; // 材質 ID
     }
     loadModel(modelId, modelTextures, modelTexturesId);
@@ -213,6 +218,7 @@ function loadWidget(config) {
     fetch(waifuPath)
       .then((response) => response.json())
       .then((result) => {
+        // 鼠標事件
         window.addEventListener("mouseover", (event) => {
           for (let { selector, text } of result.mouseover) {
             if (!event.target.matches(selector)) continue;
@@ -243,7 +249,7 @@ function loadWidget(config) {
           ) {
             text = randomSelection(text);
             text = text.replace("{year}", now.getFullYear());
-            //showMessage(text, 7000, true);
+            // showMessage(text, 7000, true);
             messageArray.push(text);
           }
         });
@@ -283,7 +289,7 @@ function loadWidget(config) {
       var messageArray = [
         "喜歡這件衣服嗎？",
         "這件新衣服好看嘛？",
-        "這件你喜歡嗎？",
+        "這件衣服你喜歡嗎？",
       ];
       if (!modelList) await loadModelList();
       const target = randomSelection(modelList.models[modelId]);
@@ -299,7 +305,7 @@ function loadWidget(config) {
             result.textures.id === 1 &&
             (modelTexturesId === 1 || modelTexturesId === 0)
           )
-            showMessage("我還沒有其他衣服呢~", 4000, 10);
+            showMessage("我還沒有其他衣服呢～", 4000, 10);
           else
             loadModel(modelId, null, result.textures.id, "我的新衣服好看嗎？");
         });
@@ -332,7 +338,7 @@ function initWidget(config, apiPath) {
   document.body.insertAdjacentHTML(
     "beforeend",
     `<div id="waifu-toggle">
-      <i class="fa fa-heart fa-beat" style="color:#d43f57"></i>
+      <i class="fas fa-heart fa-beat" style="color:#d43f57"></i>
 			<span>召喚</span>
 		</div>`
   );
