@@ -38,7 +38,7 @@
 			]
 		},
 		{
-			"selector": "#waifu-tool .fa-xmark",
+			"selector": "#waifu-tool .fa-x",
 			"text": [
 				"到了要說再見的時候了嗎？",
 				"嗚嗚 QAQ 後會有期……",

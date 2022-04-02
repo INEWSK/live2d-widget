@@ -29,7 +29,7 @@ function loadWidget(config) {
 				<span class="fa fa-lg fa-user-group"></span>
 				<span class="fa fa-lg fa-shirt"></span>
         <span class="fa fa-lg fa-moon"></span>
-				<span class="fa fa-lg fa-xmark"></span>
+				<span class="fa fa-lg fa-x"></span>
 			</div>
 		</div>`
   );
@@ -96,7 +96,7 @@ function loadWidget(config) {
     //     open("https://github.com/stevenjoezhang/live2d-widget");
     //   });
     document
-      .querySelector("#waifu-tool .fa-xmark")
+      .querySelector("#waifu-tool .fa-x")
       .addEventListener("click", () => {
         localStorage.setItem("waifu-display", Date.now());
         showMessage("嗚 QWQ，再見～", 2500, 11);
