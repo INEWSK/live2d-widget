@@ -101,11 +101,14 @@ function loadWidget(config) {
         localStorage.setItem("waifu-display", Date.now());
         showMessage("嗚 QWQ，再見～", 2500, 11);
         setTimeout(() => {
+          document.getElementById("waifu").style.bottom = "-500px";
+        }, 3000);
+        setTimeout(() => {
           document.getElementById("waifu").style.display = "none";
           document
             .getElementById("waifu-toggle")
             .classList.add("waifu-toggle-active");
-        }, 3000);
+        }, 5000);
       });
     const devtools = () => {};
     console.log("%c", devtools);
@@ -171,7 +174,7 @@ function loadWidget(config) {
   })();
 
   function showHitokoto() {
-    // 增加 hitokoto.cn 的 API
+    // hitokoto  API
     fetch("https://api.moedog.org/hitokoto/?charset=utf-8")
       .then(async (response) => response.text())
       .then((result) => {
