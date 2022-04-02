@@ -175,12 +175,17 @@ function loadWidget(config) {
 
   function showHitokoto() {
     // hitokoto  API
-    fetch("https://api.moedog.org/hitokoto/?charset=utf-8")
+    let hitokotoType = "c=d&c=e&c=f&c=k";
+    fetch("https://v1.hitokoto.cn/?encode=text&" + hitokotoType)
       .then(async (response) => response.text())
-      .then((result) => {
+      .then((data) => {
         const converter = OpenCC.Converter({ from: "cn", to: "hk" });
-        const text = converter(result);
+        const text = converter(data);
         showMessage(text, 7000, 9);
+      })
+      .catch((e) => {
+        const text = "啊… 忘記要說什麼了。";
+        showMessage(text, 6000, 9);
       });
   }
 

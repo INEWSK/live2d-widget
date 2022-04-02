@@ -307,3 +307,13 @@
 		transform: translate(0, 0) rotate(0);
 	}
 }
+
+@media screen and (max-width: 768px) {
+	#waifu {
+		display: none;
+	}
+
+	#waifu-toggle {
+		display: none;
+	}
+}
