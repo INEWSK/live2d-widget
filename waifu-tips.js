@@ -296,7 +296,7 @@ function loadWidget(config) {
     if (useCDN) {
       var messageArray = [
         "喜歡這件衣服嗎？",
-        "這件新衣服好看嘛？",
+        "這件衣服好看嘛？",
         "這件衣服你喜歡嗎？",
       ];
       if (!modelList) await loadModelList();
