@@ -306,7 +306,7 @@ function loadWidget(config) {
       showMessage(randomSelection(messageArray), 4000, 10);
     } else {
       // 可选 "rand"(随机), "switch"(顺序)
-      fetch(`${apiPath}rand_textures/?id=${modelId}-${modelTexturesId}`)
+      fetch(`${apiPath}switch_textures/?id=${modelId}-${modelTexturesId}`)
         .then((response) => response.json())
         .then((result) => {
           if (
